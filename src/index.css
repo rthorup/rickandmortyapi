@@ -1,0 +1,12 @@
+* {
+  /* border: 2px solid black; */
+}
+body {
+    background-color: #a9f3fd;
+    font-family: 'Sigmar One', cursive;
+}
+
+.rmbody {
+  width: 70%;
+  margin: auto;
+}
