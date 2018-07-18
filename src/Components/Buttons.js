@@ -16,10 +16,10 @@ class Buttons extends Component {
         <button type="button" className="btn btn-success my-2" data-toggle="modal" data-target="#findModal">Find Character</button>
       </div>
       <div className="col-md-4 ">
-        <button className="btn btn-success my-2" onClick={this.props.randomCharacter}>Random Character</button>
+        <button className="btn btn-success my-2" onClick={this.props.randomCharacter.bind(this, {type: 'random'})}>Random Character</button>
       </div>
       <div className="col-md-4">
-        <button className="btn btn-success my-2">Surprise Me</button>
+        <button className="btn btn-success my-2" onClick={this.props.randomList}>Surprise Me</button>
       </div>
 
       <div className="modal fade" id="findModal" tabIndex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
