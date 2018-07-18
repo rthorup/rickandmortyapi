@@ -4,6 +4,7 @@ import {Random} from './Components/RandomPageStart.js';
 import {CharacterDetails} from './Components/CharacterDetails.js'
 import './App.css';
 
+//multiple fetch calls but want to set them dynamically.
 const baseURL = 'https://rickandmortyapi.com/api/character/'
 
 //in case character is not found in search
@@ -80,6 +81,7 @@ class App extends Component {
     })
     .catch((error) => {
       console.log(error);
+      this.setState({failedName: this.state.searchName, view: 'notFound'});
     });
   }
 //loading specific character information. Shared by clicking individual characters and random character button.
